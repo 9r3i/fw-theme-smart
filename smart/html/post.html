@@ -1,0 +1,97 @@
+
+  <!--begin section-white -->
+  <section class="section-white">
+
+    <!--begin container -->
+    <div class="container">
+
+      <!--begin row -->
+      <div class="row">
+
+        <!--begin col-md-12 -->
+        <div class="col-md-12 text-center">
+
+          <h2 id="title">{{post.title}}</h2>
+          
+        </div>
+        <!--end col-md-12 -->
+        
+        
+        <div class="col-lg-12 col-12">
+          {{smart.postImage}}(post.id)
+        
+          <div class="col-lg-10 col-10 mx-auto mt-5" id="content">
+            {{smart.postContent}}(post)
+          </div>
+        </div>
+        
+        <div class="col-lg-12 col-12 text-center" id="order-line-button">
+          <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#modalOrder">
+            {{site.data.word.orderButton}}
+          </button>
+        </div>
+     
+      </div>
+      <!--end row -->
+  
+    </div>
+    <!--end container -->
+
+  </section>
+  <!--end section-white -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrder" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body text-center" id="modalOrderBody">
+        
+        <i class="bi bi-cursor newsletter-icon"></i>
+
+        <h3>{{site.data.word.orderTitle}}</h3>
+        
+        <p>{{post.title}}</p>
+
+        <!--begin newsletter_form_box -->
+        <div class="newsletter_form_box">
+          
+          <!--begin newsletter-form -->
+          <form id="newsletter-form-hero" class="newsletter-form" action="?send" method="post">
+
+            <input class="input-modal" type="text" name="name" placeholder="{{site.data.word.enterName}}" required="" />
+            <input class="input-modal" pattern="^\+?[0-9]{9,15}$" type="tel" name="phone" placeholder="{{site.data.word.enterPhone}}" required="" />
+            <textarea class="textarea-modal" name="address" placeholder="{{site.data.word.enterAddress}}" required=""></textarea>
+            <input type="submit" value="{{site.data.word.send}}" id="submit-button-newsletter-hero" />
+            <input name="method" value="crispy.reservation" type="hidden" />
+            <input name="menu" value="{{post.title}}" type="hidden" />
+            <input name="menuID" value="{{post.id}}" type="hidden" />
+            <input name="after" value="afterOrder" type="hidden" />
+            <input name="before" value="beforeOrder" type="hidden" />
+
+          </form>
+          <!--end newsletter-form -->
+      
+        </div>
+        <!--end newsletter_form_box -->
+
+      </div>
+
+      <div class="modal-footer">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+

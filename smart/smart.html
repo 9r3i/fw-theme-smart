@@ -1,0 +1,138 @@
+
+
+<!-- begin header -->
+<header>
+
+<nav class="navbar navbar-expand-lg navbar-fixed-top">
+
+  <div class="container">
+
+    <!-- begin logo -->
+    <a class="navbar-brand" href="?home"><i class="bi bi-intersect"></i> {{site.name}}</a>
+    <!-- end logo -->
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+
+      <!-- begin navbar-nav -->
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll justify-content-center">
+        
+        {{smart.navMenu}}(site.data.navigation)
+
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <a href="{{kkey}}"><button type="button" class="btn btn-link"><i class="bi bi-person"></i> {{site.data.word.login}}</button></a>
+        <a href="{{kkey}}"><button type="button" class="btn btn-primary">{{site.data.word.signup}}</button></a>
+      </div>
+    </div>
+
+  </div>
+
+</nav>
+
+</header>
+<!-- end header -->
+
+<main>
+
+{{smart.mainContent}}(query,post,bulk)
+
+</main>
+
+
+<!--begin footer -->
+<footer>
+  
+  <section class="section-grey medium-padding-bottom">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </section>
+  
+  <!--begin section-white -->
+  <section class="section-white">
+
+    <!--begin container -->
+    <div class="container">
+
+      <!--begin row -->
+      <div class="row align-items-center">
+
+        <!--begin col-md-6-->
+        <div class="col-md-6 text-center">
+
+          <p class="testimonial-single">“{{site.data.testimonial.message}}”</p>
+
+          <h5 class="margin-bottom-5">{{site.data.testimonial.name}}</h5>
+
+          <p class="blue">{{site.data.testimonial.occupation}}</p>
+
+        </div>
+        <!--end col-md-6-->
+   
+        <!--begin col-md-6-->
+        <div class="col-md-6">
+
+          <img src="{{site.data.testimonial.picture}}" class="width-100" alt="">
+
+        </div>
+        <!--end col-md-6-->
+
+      </div>
+      <!--end row -->
+
+    </div>
+    <!--end container -->
+
+  </section>
+  <!--end section-white -->
+
+  
+  <div class="footer">
+        
+    <!--begin container -->
+    <div class="container">
+  
+      <!--begin row -->
+      <div class="row">
+    
+        <!--begin col-md-7 -->
+        <div class="col-md-7">
+         
+          <p>Copyright &copy; {{site.date.year}}, <span class="site-footer-name">{{site.name}}</span>.</p>
+          
+        </div>
+        <!--end col-md-7 -->
+        
+        <!--begin col-md-5 -->
+        <div class="col-md-5">
+                               
+          <!--begin footer_social -->
+          <ul class="footer_social">
+            
+            {{smart.footerSocial}}(site.data.social)
+            
+          </ul>
+          <!--end footer_social -->
+          
+        </div>
+        <!--end col-md-5 -->
+
+      </div>
+      <!--end row -->
+      
+    </div>
+    <!--end container -->
+            
+  </div>
+  
+</footer>
+<!--end footer -->
+  
+  

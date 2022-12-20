@@ -1,0 +1,64 @@
+
+  <!--begin contact -->
+  <section class="section-white" id="contact">
+    
+    <!--begin container-->
+    <div class="container">
+
+      <!--begin row-->
+      <div class="row">
+  
+        <!--begin col-md-6 -->
+        <div class="col-md-6" id="contact-body">
+
+          <h3>{{site.data.word.getinTouch}}</h3>
+          
+          <!--begin contact form -->
+          <form id="contact-form" class="contact" action="?send" method="post">
+            
+            <input class="contact-input white-input" required="" name="contact_names" placeholder="{{site.data.word.enterName}}*" type="text">
+
+            <input class="contact-input white-input" required="" name="contact_email" placeholder="{{site.data.word.enterEmail}}*" type="email">
+
+            <input class="contact-input white-input" required="" name="contact_phone" placeholder="{{site.data.word.enterPhone}}*" type="text">
+
+            <textarea class="contact-commnent white-input" rows="2" cols="20" name="contact_message" placeholder="{{site.data.word.enterMessage}}..."></textarea>
+
+            <input value="{{site.data.word.send}}" id="submit-button" class="contact-submit" type="submit">
+            
+            <input value="crispy.contact" name="method" type="hidden" />
+            <input value="beforeContact" name="before" type="hidden" />
+            <input value="afterContact" name="after" type="hidden" />
+
+          </form>
+          <!--end contact form -->
+          
+        </div>
+        <!--end col-md-6 -->
+
+        <!--begin col-md-6 -->
+        <div class="col-md-6 responsive-top-margins">
+
+          <h3>{{site.data.word.howtoFindUs}}</h3>
+
+          <iframe class="contact-maps" src="{{site.data.store.mapEmbed}}" width="600" height="270" style="border:0" allowfullscreen></iframe>
+
+          <h5>{{site.data.word.address}}</h5>
+
+          <p class="contact-info"><i class="bi bi-geo-alt-fill"></i> {{site.data.store.address}}</p>
+          
+          <p class="contact-info"><i class="bi bi-envelope-open-fill"></i> <a href="mailto:{{site.data.store.email}}" target="_blank">{{site.data.store.email}}</a></p>
+          
+          <p class="contact-info"><i class="bi bi-telephone-fill"></i> {{site.data.store.phone}}1</p>
+
+        </div>
+        <!--end col-md-6 -->
+
+      </div>
+      <!--end row-->
+      
+    </div>
+    <!--end container-->
+          
+  </section>
+  <!--end contact-->

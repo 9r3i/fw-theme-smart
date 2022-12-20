@@ -1,0 +1,52 @@
+
+  <!--begin home section -->
+  <section class="home-section">
+
+    <div class="home-section-overlay"></div>
+
+    <!--begin container -->
+    <div class="container home-wrapper">
+
+      <!--begin row -->
+      <div class="row align-items-center">
+      
+        <!--begin col-md-8-->
+        <div class="col-md-8 mx-auto text-center">
+
+          <h1>{{site.name}}</h1>
+
+          <p class="hero-text">{{site.description}}</p>
+
+        </div>
+        <!--end col-md-8-->
+
+      </div>
+      <!--end row -->
+
+    </div>
+    <!--end container -->
+
+  </section>
+  <!--end home section -->
+  
+  
+  
+  <!--begin blog -->
+  <section class="section-grey medium-padding-bottom" id="products">
+    
+    <!--begin container-->
+    <div class="container">
+
+      <!--begin row-->
+      <div class="row">
+        
+        {{smart.bulkContent}}()
+     
+      </div>
+      <!--end row-->
+
+    </div>
+    <!--end container-->
+
+  </section>
+  <!--end blog -->
